@@ -1,6 +1,25 @@
 !!!
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		#container
+			#wrapper
+				#main-content
+					!= body
+			#footer
+				ul
+					li.copyright Copyright &copy; 2010-2011 Tom Gallacher
+					li
+						a#twitter(href='http://twitter.com/tomgallacher89', target='_blank', title='Tom Gallacher's Twitter Handle') @tomgallacher89
+		script(src='/js/jquery-1.5.2.min.js')
+		script(src='/js/main.js')
+		script(src='/js/setup/setup.js')
+		script(src='/js/command/command.js')
+		script(src='/js/command/echo.js')
+		script(src='/js/command/help.js')
+		script(src='/js/command/make.js')
+		script(src='/js/command/clear.js')
+		script(src='/js/command/projects.js')
+		script(src='/js/init.js')
