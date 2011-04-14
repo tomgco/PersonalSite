@@ -1,0 +1,11 @@
+This is the source to my personal site - http://tomgallacher.info
+
+The site is a terminal emulator written in javascipt with basic functionality.
+
+The current avalible commands are:
+
+ echo - basic echo command
+ help - displays help about a command
+ make - just don't try to make a sandwich
+ clear - clears the current screen buffer
+ projects - displays information about the projects I have worked on
