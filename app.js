@@ -5,7 +5,8 @@
 
 var express = require('express'),
 		exec = require('child_process').exec,
-		uname = "";
+		uname = "",
+		title = 'Tom Gallacher - Software Engineer';
 
 var app = module.exports = express.createServer();
 
@@ -42,10 +43,16 @@ app.get('/', function(req, res){
 		ipAddress = req.connection.remoteAddress;
 	}
 	res.render('index', {
-		title: 'Tom Gallacher | Software Engineer',
+		title: title,
 		uname: uname,
 		time: currentDate.toGMTString(),
 		ipAddress: ipAddress		
+	});
+});
+
+app.get('/work', function(req, res){
+	res.render('work', {
+		title: 'Work / ' + title	
 	});
 });
 

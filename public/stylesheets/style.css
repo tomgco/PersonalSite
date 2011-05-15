@@ -3,6 +3,7 @@ body {
 	font-family: monospace;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
+	overflow-y: scroll;
 }
 	div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	margin: 0px 0px 0px 0px;
@@ -26,20 +27,23 @@ body {
 }
 
 #main-content {
-	height: 25px;
+	height: 100%;
+	width: 778px;
+	float: left;
 }
 
 #container {
-	margin: 30px auto 0px auto;
+	margin: 0 auto;
+	margin-top: 20px;
 	position: relative;
 	text-align: left;
-	width: 945px;
+	width: 1095px;
 }
 
 #footer {
 	clear: both;
 	display: block;
-	width: 945px;
+	width: 100%;
 }
 
 body {
@@ -54,17 +58,14 @@ body {
 
 #terminal {
 	float: left;
-	margin-bottom: 15px;
 	padding-top: 5px;
 	padding-right: 7px;
 	padding-left: 7px;
-	margin-top:-15px;
 	position: relative;
-	width: 945px;
 	max-height: 476px;
 	height: 476px;
 	overflow: auto;
-	background-color: #4C4C4C;
+	background-color: #323232;
 	color: #1EFD00;
 	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.398438);
 	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
@@ -73,10 +74,29 @@ body {
 	font-size: 12px;
 	line-height: 14px;
 	margin-bottom: 1px;
-	max-width: 924px;
 	word-wrap: break-word;
-	margin-right: 0px;
 	padding-bottom: 2px;
+	width: 763px;
+}
+
+#work {
+	float: left;
+	padding-top: 5px;
+	padding-right: 7px;
+	padding-left: 7px;
+	position: relative;
+	overflow: auto;
+	background-color: #323232;
+	color: #1EFD00;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.398438);
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
+	font-family: monospace;
+	font-size: 12px;
+	line-height: 14px;
+	word-wrap: break-word;
+	padding-bottom: 2px;
+	width: 763px;
 }
 
 #terminal a {
@@ -134,14 +154,13 @@ span.hidden {
 	display: none;
 }
 
-#navigation {
+#info {
 	position:relative;
-	z-index:2;
-	height: 25px;
-	width: 924px;
-	background-color: #B5B5B5;
-	margin-right: 7px;
-	padding-left: 14px;
+	float: left;
+	width: 300px;
+	margin-right: 17px;
+	height: 483px;
+	background-color: #323232;
 }
 
 ol, ul {
@@ -162,6 +181,11 @@ ol, ul {
 	padding-start-value: 40px;
 }
 
+.item-combined {
+	margin-left: 18px;
+	margin-top: 10px;
+}
+
 #navigation li {
 	background-colour: white;
 	display: inline;
@@ -169,4 +193,15 @@ ol, ul {
 	padding-right: 16px;
 	width: 201px;
 	height: 22px;
+}
+
+.item {
+	height: 223px;	
+	width: 352px;	
+	padding-top: 12px;
+	float: left;
+	padding-left: 14px;
+}
+
+.item .info {
 }

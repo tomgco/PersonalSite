@@ -9,18 +9,26 @@ html(lang="en")
 		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
+		input.command(type='text')
 		#container
 			#wrapper
+				#info
+					h1 Info
+					ul
+						li 
+							a(href='/') Terminal
+						li
+							a(href='/work') Work
 				#main-content
 					!= body
-			#footer
-				ul
-					li.copyright Copyright &copy; 2010-2011 Tom Gallacher
-					li
-						a#twitter(href='http://twitter.com/tomgallacher89', target='_blank', title='Tom Gallacher's Twitter Handle') @tomgallacher89
-					li
-						a#github(href='http://github.com/tomgallacher', target='_blank', title='Tom Gallacher's Github') Github Profile
-					li
-						a#linkedin(href='http://uk.linkedin.com/pub/tom-gallacher/26/8a6/b94', target='_blank') Linkedin
+				#footer
+					ul
+						li.copyright &copy; Tom Gallacher
+						li
+							a#twitter(href='http://twitter.com/tomgallacher89', target='_blank', title='Tom Gallacher's Twitter Handle') @tomgallacher89
+						li
+							a#github(href='http://github.com/tomgallacher', target='_blank', title='Tom Gallacher's Github') Github Profile
+						li
+							a#linkedin(href='http://uk.linkedin.com/pub/tom-gallacher/26/8a6/b94', target='_blank') Linkedin
 		script(src='/js/jquery-1.5.2.min.js')
 		script(src='/js/terminal.min.js')
