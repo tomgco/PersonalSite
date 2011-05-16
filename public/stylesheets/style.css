@@ -47,8 +47,7 @@ body {
 }
 
 body {
-	background-color: #FFFFFF;
-	background-position: center top;
+	background: #FFFFFF url('/images/background.png') repeat;
 }
 
 #wrapper {
@@ -67,9 +66,9 @@ body {
 	overflow: auto;
 	background-color: #323232;
 	color: #1EFD00;
-	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.398438);
-	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 4px solid #EEE;
 	font-family: monospace;
 	font-size: 12px;
 	line-height: 14px;
@@ -88,15 +87,15 @@ body {
 	overflow: auto;
 	background-color: #323232;
 	color: #1EFD00;
-	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.398438);
-	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.398438);
 	font-family: monospace;
 	font-size: 12px;
 	line-height: 14px;
 	word-wrap: break-word;
 	padding-bottom: 2px;
 	width: 763px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 4px solid #EEE;
 }
 
 #terminal a {
@@ -104,11 +103,8 @@ body {
 }
 
 #footer {
-	background-color: #FFFFFF;
-	background-position: 0px -490px;
-	background-repeat: no-repeat;
 	color: #696969;
-	padding: 5px 0px 24px 0px;
+	padding: 25px 0px 24px 0px;
 }
 
 #footer li {
@@ -157,10 +153,10 @@ span.hidden {
 #info {
 	position:relative;
 	float: left;
-	width: 300px;
+	width: 260px;
+	padding-left: 40px;
 	margin-right: 17px;
 	height: 483px;
-	background-color: #323232;
 }
 
 ol, ul {
@@ -184,15 +180,30 @@ ol, ul {
 .item-combined {
 	margin-left: 18px;
 	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 260px;
 }
 
-#navigation li {
-	background-colour: white;
-	display: inline;
-	float: left;
-	padding-right: 16px;
-	width: 201px;
-	height: 22px;
+#info li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.info h2 {
+	color: #E5E5E5;
+	text-shadow: #111 1px -1px 0px;
+}
+
+.info h3.url {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.info h3.url a {
+	color: #767676;
+	text-decoration: none;
+	font-family: verdana;
+	font-size: 9px;
 }
 
 .item {
@@ -200,7 +211,7 @@ ol, ul {
 	width: 352px;	
 	padding-top: 12px;
 	float: left;
-	padding-left: 14px;
+	padding-left: 13px;
 }
 
 .item .info {
