@@ -6,7 +6,8 @@
 var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
-		title = 'Tom Gallacher - Software Engineer';
+		title = 'Tom Gallacher - Software Engineer',
+		gzip = require('connect-gzip');
 
 var app = module.exports = express.createServer();
 
@@ -18,7 +19,8 @@ app.configure(function(){
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(app.router);
-	app.use(express.static(__dirname + '/public'));
+	app.use(gzip.staticGzip(__dirname + '/public/'));
+	//app.use(express.static(__dirname + '/public'));
 	app.use(express.favicon(__dirname + '/public/favicon.ico'));
 	exec("uname -a", function(err, stdout) {
 		uname = stdout.toString();	
