@@ -48,13 +48,15 @@ app.get('/', function(req, res){
 		title: title,
 		uname: uname,
 		time: currentDate.toGMTString(),
-		ipAddress: ipAddress		
+		ipAddress: ipAddress,
+		currentUrl: req.url
 	});
 });
 
 app.get('/work', function(req, res){
 	res.render('work', {
-		title: 'Work / ' + title	
+		title: 'Work / ' + title,
+		currentUrl: req.url
 	});
 });
 

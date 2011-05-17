@@ -15,10 +15,12 @@ html(lang="en")
 				#info
 					h1 Info
 					ul
-						li 
-							a(href='/') Terminal
-						li
-							a(href='/work') Work
+						li &gt;&nbsp;
+							a(class=/^.\/*$/.test(currentUrl) ? 'active' : '', href='/') Terminal
+						li &gt;&nbsp;
+							a(class=/\/work*/.test(currentUrl) ? 'active' : '', href='/work') Work
+					h1 Twitter
+					#twitter
 				#main-content
 					!= body
 				#footer
@@ -32,3 +34,4 @@ html(lang="en")
 							a#linkedin(href='http://uk.linkedin.com/pub/tom-gallacher/26/8a6/b94', target='_blank') Linkedin
 		script(src='/js/jquery-1.5.2.min.js')
 		script(src='/js/terminal.min.js')
+		script(src='/js/tweet.js')
