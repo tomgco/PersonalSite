@@ -1,6 +1,9 @@
 
 /**
  * Module dependencies.
+ * To Compile Javascript: 
+ * java -jar /Users/Tom/Downloads/compiler-latest/compiler.jar --js command/echo.js etc.. --js_output_file commands.min.js
+ * java -jar /Users/Tom/Downloads/compiler-latest/compiler.jar --js tweet.js --js main.js --js setup/setup.js --js config/config.js --js_output_file terminal.min.js
  */
 
 var express = require('express'),

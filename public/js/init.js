@@ -1,4 +1,5 @@
 $(function() {
+	$('#twitter').latestTweets({user: "tomgallacher89"});
 	terminal = new Terminal();
 });
 
