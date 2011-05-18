@@ -10,7 +10,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		gzippo = require('../gzippo');
+		gzippo = require('gzippo');
 
 var app = module.exports = express.createServer();
 
