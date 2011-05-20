@@ -14,7 +14,7 @@
 			
 			var init = function() {
 				$.ajax({
-					url: "http://api.twitter.com/1/statuses/user_timeline/" + that.options.user + ".json",
+					url: "https://api.twitter.com/1/statuses/user_timeline/" + that.options.user + ".json",
 					dataType: 'jsonp',
 					success: addToElement
 				});

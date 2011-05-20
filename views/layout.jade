@@ -18,7 +18,7 @@ html(lang="en")
 						li &gt;&nbsp;
 							a(class=/^.\/*$/.test(currentUrl) ? 'active' : '', href='/') Terminal
 						li &gt;&nbsp;
-							a(class=/\/work*/.test(currentUrl) ? 'active' : '', href='/work') Work
+							a(class=/\/portfolio*/.test(currentUrl) ? 'active' : '', href='/portfolio') Portfolio
 					h1 Twitter
 					#twitter
 				#main-content
@@ -29,9 +29,10 @@ html(lang="en")
 						li
 							a#twitter(href='http://twitter.com/tomgallacher89', target='_blank', title='Tom Gallacher's Twitter Handle') @tomgallacher89
 						li
+							a#lastfm(href='http://www.last.fm/user/gxblast', target='_blank', title='Tom Gallacher's Last.fm') last.fm
+						li
 							a#github(href='http://github.com/tomgallacher', target='_blank', title='Tom Gallacher's Github') Github Profile
 						li
 							a#linkedin(href='http://uk.linkedin.com/pub/tom-gallacher/26/8a6/b94', target='_blank') Linkedin
 		script(src='/js/jquery-1.5.2.min.js')
-		script(src='/js/terminal.min.js')
-		script(src='/js/commands.min.js')
+		script(src='/js/turtles.min.js')

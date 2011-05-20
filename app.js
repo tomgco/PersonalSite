@@ -2,8 +2,7 @@
 /**
  * Module dependencies.
  * To Compile Javascript: 
- * java -jar /Users/Tom/Downloads/compiler-latest/compiler.jar --js command/echo.js etc.. --js_output_file commands.min.js
- * java -jar /Users/Tom/Downloads/compiler-latest/compiler.jar --js tweet.js --js main.js --js setup/setup.js --js config/config.js --js init.js --js_output_file terminal.min.js
+ * closure command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js config/config.js main.js init.js tweet.js setup/setup.js
  */
 
 var express = require('express'),
@@ -26,7 +25,7 @@ app.configure(function(){
 	//app.use(express.static(__dirname + '/public'));
 	app.use(express.favicon(__dirname + '/public/favicon.ico'));
 	exec("uname -a", function(err, stdout) {
-		uname = stdout.toString();	
+		uname = stdout.toString();
 	});
 });
 
@@ -37,6 +36,7 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler()); 
 });
+
 
 // Routes
 
@@ -56,12 +56,36 @@ app.get('/', function(req, res){
 	});
 });
 
-app.get('/work', function(req, res){
+
+app.get('/Portfolio', function(req, res){
 	res.render('work', {
-		title: 'Work / ' + title,
+		title: 'Portfolio / ' + title,
 		currentUrl: req.url
 	});
 });
+
+app.get('/Projects', function(req, res){
+	res.render('projects', {
+		title: 'My Projects / ' + title,
+		currentUrl: req.url
+	});
+});
+
+app.error(function(err, req, res){
+	console.log(err);
+	res.render('500', {
+		title: '500 Internal Server Error / ' + title,
+		currentUrl: req.url
+	});
+});
+
+app.use(function(req, res){
+  res.render('404', {
+		title: '404 Not Found / ' + title,
+		currentUrl: req.url
+	});
+});
+
 
 // Only listen on $ node app.js
 

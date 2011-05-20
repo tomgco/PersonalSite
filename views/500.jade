@@ -1,0 +1,30 @@
+#terminal
+		p Error 500: Internal Server Error.
+		br
+		p [113189.828000] Stack: de013400 dfa41fdc 00000002 00007ba2 c10f744c de013400 de0<br />
+		| 13400 dfa427de<br />
+		| [113189.828000] 1d43c025 dd903b7c c10f744c 0042a025 deafd800 dfa49b00 000<br />
+		| 000fc c026c70b<br />
+		| [113189.828000] deafd84c 00000296 00000001 00000000 00000235 000002fc c02<br />
+		| 6d620 dd8f8eb4<br />
+		| [113189.828000] Call Trace:<br />
+		| [113189.828000] [&lt;dfa41fdc&gt;] psmouse_handle_byte+0xc/0xe0 [psmouse]<br />
+		| [113189.828000] [&lt;dfa427de&gt;] psmouse_interrupt+0xae/0x240 [psmouse]<br />
+		| [113189.828000] [&lt;c025c70b&lt;] serio_interrupt+0x3b/0x80<br />
+		| [113189.828000] [&lt;c026d620&gt;] i8042_interrupt+0x110/0x250<br />
+		| [113189.828000] [&lt;c01538c0&gt;] handle_IRQ_event+0x30/0x60<br />
+		| [113189.828000] [&lt;c015505e&gt;] handle_edge_irq+0xae/0x130<br />
+		| [113189.828000] [&lt;c0105b70&gt;] do_IRQ+0x40/0x80<br />
+		| [113189.828000] [&lt;c0104233&gt;] common_interrupt+0x23/0x30<br />
+		| [113189.828000] [&lt;c02e0033&gt;] xfrm_state_find+0x4e3/0x570<br />
+		| [113189.828000] =======================<br />
+		| [113189.828000] Code: 00 00 00 e9 7b ff ff ff 8b 44 24 14 f7 d8 eb d0 8d 76 00 5<br />
+		| 3 0f b6 50 4c 89 c1 8b 18 89 d0 25 c8 00 00 00 83 f8 08 74 2d 8b 43 44 <22> 50 0<br />
+		| 4 3a 50 03 74 04 31 c0 5b c3 0f b6 51 55 8d 42 fe 3c 04<br />
+		| [113189.828000] EIP: [&lt;dfa438b8&gt;] alps_process_byte+0x18/0x60 [psmouse] SS:ESP 0<br />
+		| 068:d6d27ee8<br />
+		| [113189.828000] &lt;0&gt;Kernel panic - not syncing: Fatal exception in interrupt<br />
+		| [113189.828000]<br />
+		| <br />
+		| *** www.tomgallacher.info going down for restart NOW<br />
+		| <br />
