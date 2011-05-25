@@ -2,3 +2,4 @@
 .settings.xml
 .DS_Store
 *.gz
+.monitor

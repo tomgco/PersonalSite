@@ -9,7 +9,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		gzippo = require('gzippo');
+		gzippo = require('../gzippo');
 
 var app = module.exports = express.createServer();
 
@@ -67,6 +67,13 @@ app.get('/portfolio', function(req, res){
 app.get('/projects', function(req, res){
 	res.render('projects', {
 		title: 'My Projects / ' + title,
+		currentUrl: req.url
+	});
+});
+
+app.get('/gzippo', function(req, res){
+	res.render('/projects/gzippo', {
+		title: 'gzippo / ' + title,
 		currentUrl: req.url
 	});
 });

@@ -167,7 +167,6 @@ span.hidden {
 	position:relative;
 	float: left;
 	width: 260px;
-	padding-left: 40px;
 	margin-right: 17px;
 	height: 483px;
 }
@@ -240,6 +239,15 @@ ol, ul {
 	text-decoration: none;
 	font-family: verdana;
 	font-size: 9px;
+}
+
+.image-flag {
+	width: 300px;
+	height: 201px;
+}
+
+.image-flag img.flag {
+	position: absolute;
 }
 
 .item {
