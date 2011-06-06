@@ -25,6 +25,7 @@ html(lang="en")
 						//	a(class=/\/blog*/.test(currentUrl) ? 'active' : '', href='/blog') Blog
 					h1 Twitter
 					#twitter
+						!=partial('partials/tweets', globals)
 				#main-content
 					!= body
 				#footer

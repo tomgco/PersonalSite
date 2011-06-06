@@ -1,0 +1,3 @@
+- if (typeof globals.twitterResponse === 'object')
+	- for (i in globals.twitterResponse)
+		.tweet!=globals.twitterResponse[i].text
