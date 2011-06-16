@@ -1,0 +1,20 @@
+{
+"name" : "PersonalSite",
+"version" : "1.0.0",
+"author" : "Tom Gallacher",
+"description" : "My Personal site",
+"homepage" : "http://www.tomgallacher.info/",
+"repository":
+  {
+		"type": "git",
+		"url": "git://github.com/tomgallacher/PersonalSite.git"
+  },
+"engines" : { "node" : "*" },
+"main" : "./index.js",
+"dependencies" :
+	{
+		"gzippo" : "= 0.0.2",
+		"express" : "= 2.3.11",
+		"jade" : "= 0.12.2"
+	}
+}
