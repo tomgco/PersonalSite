@@ -31,9 +31,11 @@
 	p In your express/connect server setup, use as follows:
 	.codeblock
 		| var gzippo = require('gzippo');
-		|
+		br
 		| //Replace the static provider with gzippo's
+		br
 		| //app.use(express.static(__dirname + '/public'));
+		br
 		| app.use(gzippo.staticGzip(__dirname + '/public'));
 	br
 	h3 Options
