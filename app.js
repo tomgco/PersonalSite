@@ -98,20 +98,20 @@ app.get('/projects', function(req, res){
 	});
 });
 
-//app.get('/gzippo', function(req, res){
-//	function renderView() {
-//		res.render('/projects/gzippo', {
-//			title: 'gzippo / ' + title,
-//			currentUrl: req.url,
-//			globals: globals
-//		});
-//	}
-//	
-//	latestTweet.get(function (tweet) {
-//		globals.twitterResponse = tweet;
-//		renderView();
-//	});
-//});
+app.get('/gzippo', function(req, res){
+	function renderView() {
+		res.render('gzippo', {
+			title: 'gzippo / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
+	});
+});
 
 app.error(function(err, req, res){
 	function renderView() {
