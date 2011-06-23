@@ -275,3 +275,22 @@ ol, ul {
 	text-decoration: none;
 	text-shadow: #fff 0px 1px 0px;
 }
+
+
+#work.copy, p {
+	color: #D4D9D0;
+	font-family: Palatino, serif;
+}
+.copy h2 {
+	padding-top: 5px;	
+}
+.copy a {
+	text-decoration: none;
+	color: #FFF;
+}
+.codeblock {
+	color: #1EFD00;
+	font-family: monospace;	
+	padding-left: 15px;
+	padding-top: 5px;
+}

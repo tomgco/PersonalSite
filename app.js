@@ -9,7 +9,8 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		gzippo = require('gzippo');
+		gzippo = require('gzippo'),
+		latestTweet = require("./modules/latest-tweet");
 
 var app = module.exports = express.createServer();
 
@@ -27,6 +28,7 @@ app.configure(function(){
 	exec("uname -a", function(err, stdout) {
 		uname = stdout.toString();
 	});
+	latestTweet.setUser("tomgallacher89");
 });
 
 app.configure('development', function(){
@@ -37,7 +39,7 @@ app.configure('production', function(){
   app.use(express.errorHandler()); 
 });
 
-
+var globals = {};
 // Routes
 
 app.get('/', function(req, res){
@@ -47,49 +49,98 @@ app.get('/', function(req, res){
 	if (ipAddress === undefined) {
 		ipAddress = req.connection.remoteAddress;
 	}
-	res.render('index', {
-		title: title,
-		uname: uname,
-		time: currentDate.toGMTString(),
-		ipAddress: ipAddress,
-		currentUrl: req.url
+	
+	function renderView() {
+		res.render('index', {
+			title: title,
+			uname: uname,
+			time: currentDate.toGMTString(),
+			ipAddress: ipAddress,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
 
 app.get('/portfolio', function(req, res){
-	res.render('work', {
-		title: 'Portfolio / ' + title,
-		currentUrl: req.url
+	function renderView() {
+		res.render('work', {
+			title: 'Portfolio / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
 app.get('/projects', function(req, res){
-	res.render('projects', {
-		title: 'My Projects / ' + title,
-		currentUrl: req.url
+	function renderView() {
+		res.render('projects', {
+			title: 'My Projects / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
 app.get('/gzippo', function(req, res){
-	res.render('/projects/gzippo', {
-		title: 'gzippo / ' + title,
-		currentUrl: req.url
+	function renderView() {
+		res.render('gzippo', {
+			title: 'gzippo / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
 app.error(function(err, req, res){
-	console.log(err);
-	res.render('500', {
-		title: '500 Internal Server Error / ' + title,
-		currentUrl: req.url
+	function renderView() {
+		console.log(err);
+		res.render('500', {
+			title: '500 Internal Server Error / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
 app.use(function(req, res){
-  res.render('404', {
-		title: '404 Not Found / ' + title,
-		currentUrl: req.url
+	function renderView() {
+	  res.render('404', {
+			title: '404 Not Found / ' + title,
+			currentUrl: req.url,
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
 	});
 });
 
