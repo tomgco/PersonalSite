@@ -10,7 +10,8 @@ var express = require('express'),
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
 		gzippo = require('gzippo'),
-		latestTweet = require("./modules/latest-tweet");
+		latestTweet = require("./modules/latest-tweet"),
+		cluster = require('cluster');
 
 var app = module.exports = express.createServer();
 
@@ -147,7 +148,12 @@ app.use(function(req, res){
 
 // Only listen on $ node app.js
 
-if (!module.parent) {
-  app.listen(3002);
-  console.log("Express server listening on port %d", app.address().port);
-}
+// Only listen on $ node app.js
+
+cluster = cluster(app)
+	.use(cluster.stats())
+	.use(cluster.pidfiles('pids'))
+	.use(cluster.cli())
+	.listen(3002);
+	
+	console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
