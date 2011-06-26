@@ -9,7 +9,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		metaContent = 'Hi my name is Tom Gallacher and I am a software engineer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and just enjoying life.',
+		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and just enjoying life.',
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
 		cluster = require('cluster');
@@ -59,7 +59,7 @@ app.get('/', function(req, res){
 			time: currentDate.toGMTString(),
 			ipAddress: ipAddress,
 			currentUrl: req.url,
-			metaContent: metaContent,
+			metaDescription: metaDescription,
 			globals: globals
 		});
 	}
@@ -77,7 +77,7 @@ app.get('/portfolio', function(req, res){
 			title: 'Portfolio / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaContent: metaContent
+			metaDescription: metaDescription
 		});
 	}
 	
@@ -93,7 +93,7 @@ app.get('/projects', function(req, res){
 			title: 'My Projects / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaContent: metaContent
+			metaDescription: metaDescription
 		});
 	}
 	
@@ -109,7 +109,7 @@ app.get('/gzippo', function(req, res){
 			title: 'gzippo / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaContent: 'Gzippo is a NodeJS middleware to gzip expressjs / connect assets. Gzipping on the application layer is perfect in situations where you have no control over server configurations.'
+			metaDescription: 'Gzippo is a NodeJS middleware to gzip expressjs / connect assets. Gzipping on the application layer is perfect in situations where you have no control over server configurations.'
 		});
 	}
 	
@@ -126,7 +126,7 @@ app.error(function(err, req, res){
 			title: '500 Internal Server Error / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaContent: metaContent
+			metaDescription: metaDescription
 		});
 	}
 	
@@ -142,7 +142,7 @@ app.use(function(req, res){
 			title: '404 Not Found / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaContent: metaContent
+			metaDescription: metaDescription
 		});
 	}
 	
