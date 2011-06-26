@@ -9,7 +9,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and just enjoying life.',
+		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer / web developer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and just enjoying life.',
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
 		cluster = require('cluster');
@@ -77,7 +77,7 @@ app.get('/portfolio', function(req, res){
 			title: 'Portfolio / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaDescription: metaDescription
+			metaDescription: 'Sites that Tom Gallacher has worked on include; shortlist.com, stylist.co.uk, jarredchristmas.co.uk and weareyates.co.uk'
 		});
 	}
 	
@@ -93,7 +93,7 @@ app.get('/projects', function(req, res){
 			title: 'My Projects / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaDescription: metaDescription
+			metaDescription: 'This is a list of projects that Tom Gallacher has worked on for fun and enjoyment and other various reasons.'
 		});
 	}
 	
