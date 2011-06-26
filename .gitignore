@@ -4,3 +4,4 @@
 *.gz
 .monitor
 node_modules/
+pids/
