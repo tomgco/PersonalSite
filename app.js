@@ -23,6 +23,7 @@ app.configure(function(){
 	app.set('view engine', 'jade');
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
+	//app.use(gzippo.gzip());
 	app.use(app.router);
 	app.use(gzippo.staticGzip(__dirname + '/public'));
 	//app.use(express.static(__dirname + '/public'));
