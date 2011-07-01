@@ -277,7 +277,7 @@ ol, ul {
 }
 
 
-#work.copy, p {
+#work.copy, #work p {
 	color: #D4D9D0;
 	font-family: Palatino, serif;
 }
