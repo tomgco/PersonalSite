@@ -1,0 +1,16 @@
+{
+"name" : "PersonalSite",
+"version" : "0.1.0",
+"author" : "Tom Gallacher",
+"description" : "My Personal Website.",
+"homepage" : "http://www.tomg.co/",
+"engines" : { "node" : ">=0.4" },
+"main" : "./app.js",
+"dependencies" :
+	{
+		"cluster": "0.6.4",
+		"express": "2.4.0",
+		"gzippo": "0.0.3",
+		"jade": "0.12.4"
+	}
+}
