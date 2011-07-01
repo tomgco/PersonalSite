@@ -102,7 +102,7 @@ function Terminal(configData) {
 	}
 
 	function appendToContent() {
-		$("#terminal").append("guest@tomgallacher.info:/$&nbsp;<span class=\"text-input\"><span class=\"cursor\">&nbsp;</span>");
+		$("#terminal").append("guest@tomg.co:/$&nbsp;<span class=\"text-input\"><span class=\"cursor\">&nbsp;</span>");
 		$(".command").val("");
 		$("#terminal").attr({ scrollTop: $("#terminal").attr("scrollHeight") });
 	}
