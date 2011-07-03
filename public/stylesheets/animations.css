@@ -18,3 +18,8 @@
 	-webkit-transition: all 2s ease-in-out;
 	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(4deg);
 }
+
+#main-content.normal {
+	-webkit-transition: all 2s ease-in-out;
+	-webkit-transform: perspective(1500px) rotateY(0deg) rotateX(0deg);
+}
