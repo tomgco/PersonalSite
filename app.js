@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  * To Compile Javascript: 
- * closure command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js config/config.js main.js init.js tweet.js setup/setup.js
+ * closure command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js config/config.js main.js init.js tweet.js animation.js setup/setup.js
  */
 
 var express = require('express'),
