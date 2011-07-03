@@ -1,7 +1,7 @@
 $(function() {
 	var reset = false;
 	var finished = true;
-	var elmnt = $('#terminal');
+	var elmnt = $('#main-content');
 	var width = $('#main-content').width() / 2;
 	var height = $('#main-content').height() / 2;
 	var offset = $('#main-content').offset();

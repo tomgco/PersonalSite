@@ -1,23 +1,20 @@
-#terminal {
-}
-
-#terminal.bottom-left {
+#main-content.bottom-left {
 	-webkit-transition: all 2s ease-in-out;
 	-webkit-transform: perspective(1500px) rotateY(6deg) rotateX(4deg);
 }
 
-#terminal.bottom-right {
+#main-content.bottom-right {
 	-webkit-transition: all 2s ease-in-out;
 	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(-7deg);
 }
 
-#terminal.top-left {
+#main-content.top-left {
 	-webkit-transition: all 2s ease-in-out;
 	-webkit-transform: perspective(1500px) rotateY(6deg) rotateX(-4deg);
 }
 
 
-#terminal.top-right {
+#main-content.top-right {
 	-webkit-transition: all 2s ease-in-out;
 	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(4deg);
 }
