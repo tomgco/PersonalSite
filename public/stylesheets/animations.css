@@ -5,7 +5,7 @@
 
 #main-content.bottom-right {
 	-webkit-transition: all 2s ease-in-out;
-	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(-7deg);
+	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(4deg);
 }
 
 #main-content.top-left {
@@ -16,7 +16,7 @@
 
 #main-content.top-right {
 	-webkit-transition: all 2s ease-in-out;
-	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(4deg);
+	-webkit-transform: perspective(1500px) rotateY(-9deg) rotateX(-7deg);
 }
 
 #main-content.normal {
