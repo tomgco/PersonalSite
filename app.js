@@ -24,8 +24,8 @@ app.configure(function(){
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	//app.use(gzippo.gzip());
-	app.use(app.router);
 	app.use(gzippo.staticGzip(__dirname + '/public'));
+	app.use(app.router);
 	//app.use(express.static(__dirname + '/public'));
 	app.use(express.favicon(__dirname + '/public/favicon.ico'));
 	exec("uname -a", function(err, stdout) {
@@ -138,7 +138,7 @@ app.error(function(err, req, res){
 	});
 });
 
-app.use(function(req, res){
+app.get('*', function(req, res){
 	function renderView() {
 	  res.render('404', {
 			title: '404 Not Found / ' + title,

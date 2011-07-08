@@ -5,3 +5,4 @@
 .monitor
 node_modules/
 pids/
+npm-debug.log
