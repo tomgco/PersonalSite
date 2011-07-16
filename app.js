@@ -120,40 +120,40 @@ app.get('/gzippo', function(req, res){
 	});
 });
 
-app.error(function(err, req, res){
-	function renderView() {
-		console.log(err);
-		res.render('500', {
-			title: '500 Internal Server Error / ' + title,
-			currentUrl: req.url,
-			status: 500,
-			globals: globals,
-			metaDescription: metaDescription
-		});
-	}
-	
-	latestTweet.get(function (tweet) {
-		globals.twitterResponse = tweet;
-		renderView();
-	});
-});
-
-app.get('*', function(req, res){
-	function renderView() {
-	  res.render('404', {
-			title: '404 Not Found / ' + title,
-			status: 404,
-			currentUrl: req.url,
-			globals: globals,
-			metaDescription: metaDescription
-		});
-	}
-	
-	latestTweet.get(function (tweet) {
-		globals.twitterResponse = tweet;
-		renderView();
-	});
-});
+//app.error(function(err, req, res){
+//	function renderView() {
+//		console.log(err);
+//		res.render('500', {
+//			title: '500 Internal Server Error / ' + title,
+//			currentUrl: req.url,
+//			status: 500,
+//			globals: globals,
+//			metaDescription: metaDescription
+//		});
+//	}
+//	
+//	latestTweet.get(function (tweet) {
+//		globals.twitterResponse = tweet;
+//		renderView();
+//	});
+//});
+//
+//app.get('*', function(req, res){
+//	function renderView() {
+//	  res.render('404', {
+//			title: '404 Not Found / ' + title,
+//			status: 404,
+//			currentUrl: req.url,
+//			globals: globals,
+//			metaDescription: metaDescription
+//		});
+//	}
+//	
+//	latestTweet.get(function (tweet) {
+//		globals.twitterResponse = tweet;
+//		renderView();
+//	});
+//});
 
 
 // Only listen on $ node app.js
