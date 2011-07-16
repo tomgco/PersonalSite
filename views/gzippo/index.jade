@@ -2,16 +2,16 @@
 	h2 GZIPPO -&nbsp;
 		a.url(href='https://github.com/tomgallacher/gzippo', target='_blank') Source Code
 	br
-	p gzippo pronounced g-zippo is a gzip&nbsp;
+	p gzippo pronounced g-zippo created by Tom Gallacher is a gzip&nbsp;
 		a(href='http://nodejs.org', target='_blank') NodeJS
 		| &nbsp;middleware for 
 		a(href='http://senchalabs.github.com/connect/', target='_blank') Connect
 		| &nbsp;/
-		a(href='http://expressjs.com/') Expressjs
+		a(href='http://expressjs.com/') Express
 		| &nbsp;using node-compress for much better performace than any other connect gzip or express gzip middleware.
 		| The reasons behind the performace increase is unlike the deprecated connect gzip implemention and modules based on
-		| this such as connect-gzip, is gzippo does not use child_process.exec to spawn a process instead it uses node-compress
-		| which can be found in the node package manager npm.
+		| this such as connect-gzip, is gzippo does not use child_process.exec to spawn a process instead it uses native C++
+		| code. gzippo can be found in the node package manager npm.
 	br
 	h3 Sites gzippo is current used on (that I know about)
 	p
@@ -21,7 +21,7 @@
 		a(href='https://www.sunperks.co.uk') www.sunperks.co.uk
 		br
 	br
-	p If you are using gzippo let me know / fork me and make a pull request and I will link you here =]
+	p If you are using gzippo let me know or create a pull request and I will link you here =]
 	br
 	h3 Installation
 	.codeblock $ npm install gzippo
@@ -32,7 +32,7 @@
 	.codeblock
 		| var gzippo = require('gzippo');
 		br
-		| //Replace the static provider with gzippo's
+		| //Replace the default connect or express static provider with gzippo's
 		br
 		| //app.use(express.static(__dirname + '/public'));
 		br
@@ -49,7 +49,9 @@
 	<a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a>
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=234982846530171&amp;href=http%3A%2F%2Fwww.tomg.co%2Fgzippo&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
 	<a href="http://twitter.com/share" class="twitter-share-button" data-text="Checkout gzippo a #nodejs connect gzip / expressjs gzip middleware" data-count="horizontal" data-via="tomgallacher89">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<g:plusone size="medium"></g:plusone>
 	noscript
 		a(href='http://flattr.com/thing/282348/gzippo-node-js-gzip-module', target='_blank')
 		img(src='http://api.flattr.com/button/flattr-badge-large.png', alt='Flattr this', title='Flattr this', border='0')
 	script(type='text/javascript', src='/js/flattr.js')
+	script(type='text/javascript', src='https://apis.google.com/js/plusone.js')

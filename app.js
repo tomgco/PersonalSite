@@ -9,7 +9,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher - Software Engineer',
-		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer / web developer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and just enjoying life.',
+		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer / web developer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and photography. tomg.co is just my own personal website experiment using nodejs and portfolio',
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
 		cluster = require('cluster');
@@ -78,7 +78,7 @@ app.get('/portfolio', function(req, res){
 			title: 'Portfolio / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaDescription: 'Sites that Tom Gallacher has worked on include; shortlist.com, stylist.co.uk, jarredchristmas.co.uk and weareyates.co.uk'
+			metaDescription: 'Tom Gallacher has worked on the following sites; shortlist.com, stylist.co.uk, jarredchristmas.co.uk, sunperks.co.uk and weareyates.co.uk'
 		});
 	}
 	
@@ -94,7 +94,7 @@ app.get('/projects', function(req, res){
 			title: 'My Projects / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaDescription: 'This is a list of projects that Tom Gallacher has worked on for fun and enjoyment and other various reasons.'
+			metaDescription: 'Projects that Tom Gallacher has or is currently working on for enjoyment and other various reasons.'
 		});
 	}
 	
@@ -110,7 +110,7 @@ app.get('/gzippo', function(req, res){
 			title: 'gzippo / ' + title,
 			currentUrl: req.url,
 			globals: globals,
-			metaDescription: 'Gzippo is a NodeJS middleware to gzip expressjs / connect assets. Gzipping on the application layer is perfect in situations where you have no control over server configurations.'
+			metaDescription: 'Gzippo is a NodeJS middleware for express gzip / connect gzip support. Can be used by adding express.gzip() or replace express.static() with express.staticGzip() '
 		});
 	}
 	
@@ -120,40 +120,40 @@ app.get('/gzippo', function(req, res){
 	});
 });
 
-app.error(function(err, req, res){
-	function renderView() {
-		console.log(err);
-		res.render('500', {
-			title: '500 Internal Server Error / ' + title,
-			currentUrl: req.url,
-			status: 500,
-			globals: globals,
-			metaDescription: metaDescription
-		});
-	}
-	
-	latestTweet.get(function (tweet) {
-		globals.twitterResponse = tweet;
-		renderView();
-	});
-});
-
-app.get('*', function(req, res){
-	function renderView() {
-	  res.render('404', {
-			title: '404 Not Found / ' + title,
-			status: 404,
-			currentUrl: req.url,
-			globals: globals,
-			metaDescription: metaDescription
-		});
-	}
-	
-	latestTweet.get(function (tweet) {
-		globals.twitterResponse = tweet;
-		renderView();
-	});
-});
+//app.error(function(err, req, res){
+//	function renderView() {
+//		console.log(err);
+//		res.render('500', {
+//			title: '500 Internal Server Error / ' + title,
+//			currentUrl: req.url,
+//			status: 500,
+//			globals: globals,
+//			metaDescription: metaDescription
+//		});
+//	}
+//	
+//	latestTweet.get(function (tweet) {
+//		globals.twitterResponse = tweet;
+//		renderView();
+//	});
+//});
+//
+//app.get('*', function(req, res){
+//	function renderView() {
+//	  res.render('404', {
+//			title: '404 Not Found / ' + title,
+//			status: 404,
+//			currentUrl: req.url,
+//			globals: globals,
+//			metaDescription: metaDescription
+//		});
+//	}
+//	
+//	latestTweet.get(function (tweet) {
+//		globals.twitterResponse = tweet;
+//		renderView();
+//	});
+//});
 
 
 // Only listen on $ node app.js

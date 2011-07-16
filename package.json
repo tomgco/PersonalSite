@@ -9,8 +9,8 @@
 "dependencies" :
 	{
 		"cluster": "0.6.4",
-		"express": "2.4.0",
+		"express": "2.4.3",
 		"gzippo": "0.0.3",
-		"jade": "0.12.4"
+		"jade": "0.13.0"
 	}
 }
