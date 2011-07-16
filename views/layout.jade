@@ -28,11 +28,13 @@ html(lang="en")
 					h1 Twitter
 					#twitter
 						!=partial('partials/tweets', globals)
+					<g:plusone size="small"></g:plusone>
 				#main-content
 					!= body
 				#footer
 					ul
-						li.copyright &copy; 2009-2011 Tom Gallacher
+						li.copyright
+							&copy; 2009-2011 Tom Gallacher
 						li
 							a#twitter(href='http://twitter.com/tomgallacher89', target='_blank', title='Contact me on twitter') @tomgallacher89
 						li
@@ -44,4 +46,5 @@ html(lang="en")
 						li
 							a#linkedin(href='http://uk.linkedin.com/in/tomgallacher', target='_blank', title='My Professional Profile') Linkedin
 		script(src='/js/jquery-1.5.2.min.js')
+		script(type='text/javascript', src='https://apis.google.com/js/plusone.js')
 		script(src='/js/turtles.min.js')
