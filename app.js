@@ -155,7 +155,6 @@ app.get('/gzippo', function(req, res){
 //	});
 //});
 
-
 // Only listen on $ node app.js
 
 cluster = cluster(app)
@@ -164,4 +163,4 @@ cluster = cluster(app)
 	.use(cluster.cli())
 	.listen(3002);
 	
-	console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
+console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
