@@ -7,6 +7,7 @@ _gaq.push(['_setAccount', 'UA-24124485-1']);
 _gaq.push(['_setDomainName', 'none']);
 _gaq.push(['_setAllowLinker', true]);
 _gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
 
 (function() {
 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
