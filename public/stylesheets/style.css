@@ -1,298 +1,44 @@
-@font-face {
-	font-family: 'SteinerRegular';
-	src: url('/fonts/steinerlight-webfont.eot');
-	src: url('/fonts/steinerlight-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('/fonts/steinerlight-webfont.woff') format('woff'),
-	     url('/fonts/steinerlight-webfont.ttf') format('truetype'),
-	     url('/fonts/steinerlight-webfont.svg#SteinerRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
-body {
-	background-repeat: no-repeat;
-	font-family: monospace;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	overflow-y: scroll;
-	border-top: 2px green solid;
-}
-
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-}
-
-p,li,td,th,textarea,input,select,option,label,.label,dt,dd,address {
-	font-family: monospace;
-	font-size: 14px;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-body {
-}
-
-#main-content {
-	height: 100%;
-	width: 778px;
-	float: left;
-}
-
-#container {
-	margin: 0 auto;
-	margin-top: 80px;
-	position: relative;
-	text-align: left;
-	width: 1095px;
-}
-
-#footer {
-	clear: both;
-	display: block;
-	width: 100%;
-	height: 100px;
-}
-
-body {
-	background: #FFFFFF url('/images/background.jpg') repeat;
-}
-
-#wrapper {
-	position: relative;
-	z-index: 2;
-}
-
-#terminal {
-	float: left;
-	padding-top: 5px;
-	padding-right: 7px;
-	padding-left: 7px;
-	position: relative;
-	max-height: 476px;
-	height: 476px;
-	overflow: auto;
-	background-color: #323232;
-	color: #1EFD00;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 4px solid #EEE;
-	font-family: monospace;
-	font-size: 12px;
-	line-height: 14px;
-	margin-bottom: 1px;
-	word-wrap: break-word;
-	padding-bottom: 2px;
-	width: 763px;
-}
-
-#work {
-	float: left;
-	padding-top: 5px;
-	padding-right: 7px;
-	padding-left: 7px;
-	position: relative;
-	overflow: auto;
-	background-color: #323232;
-	color: #1EFD00;
-	font-family: monospace;
-	font-size: 12px;
-	line-height: 14px;
-	word-wrap: break-word;
-	padding-bottom: 2px;
-	width: 763px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 4px solid #EEE;
-}
-
-#terminal a {
-	color: #1EED00;
-}
-
-#footer {
-	color: #696969;
-	padding: 80px 0px 24px 0px;
-}
-
-#footer li {
-	background-position: right 1px;
-	background-repeat: no-repeat;
-	display: inline;
-	font-size: 11px;
-	padding: 0px 10px 0px 9px;
-}
-
-#footer .copyright {
-	padding-right: 15px;
-}
-
-#footer li a {
-	color: #696969;
-	padding: 0px 5px 0px 7px;
-}
-
-a {
-	color: #000000;
-	text-decoration: underline;
-}
-
-span.cursor {
-	background-color: #1EFD00;
-	margin-left: 0px;
-}
-
-input {
-	background-color: white;
-	color: white;
-	border: 0px none;
-	font-size: 12px;
-	font-family: monospace;
-	cursor: default;
-	outline: none;
-	width: 1px;
-	height: 1px;
-}
-
-span.hidden {
-	display: none;
-}
-
-#info {
-	position:relative;
-	float: left;
-	width: 260px;
-	margin-right: 17px;
-	height: 483px;
-}
-
-ol, ul {
-	list-style-image: none;
-	list-style-position: outside;
-	list-style-type: none;
-}
-
-#navigation ul {
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	height: 25px;
-	background-color: #B5B5B5;
-	float: left;
-	display: block;
-	padding-left-ltr-source: logical;
-	padding-left-rtl-source: logical;
-	padding-start-value: 40px;
-}
-
-.item-combined {
-	margin-left: 18px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: 260px;
-}
-
-#info ul {
-	padding-bottom: 30px;
-}
-
-#info li {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-#info li a {
-	color: #999;
-	text-decoration: none;
-	text-shadow: #eee 0px 1px 0px;
-}
-
-#info li a.active {
-	color: #2e2e2e;
-	text-decoration: none;
-	text-shadow: #eee 0px 0px 0px;
-}
-
-#info h1 {
-	font-family: 'SteinerRegular';
-	font-size: 27px;
-	text-shadow: 0px 1px 0px #ddd;
-	color: #333;
-}
-
-.info h2 {
-	color: #E5E5E5;
-	text-shadow: #111 1px -1px 0px;
-}
-
-.info h3.url {
-	margin-top: 3px;
-	margin-bottom: 3px;
-}
-
-.info h3.url a {
-	color: #767676;
-	text-decoration: none;
-	font-family: verdana;
-	font-size: 9px;
-}
-
-.image-flag {
-	width: 300px;
-	height: 201px;
-}
-
-.image-flag img.flag {
-	position: absolute;
-}
-
-.item {
-	height: 223px;	
-	width: 352px;	
-	padding-top: 12px;
-	float: left;
-	padding-left: 13px;
-}
-
-#twitter {
-	padding-top: 8px;
-	font-size: 12px;
-}
-
-#twitter .tweet {
-	color: #6C6C6C;
-	text-decoration: none;
-	text-shadow: #fff 0px 1px 0px;
-	padding: 7px 0px 7px 0px;	
-}
-
-#twitter .tweet a {
-	color: #313131;
-	text-decoration: none;
-	text-shadow: #fff 0px 1px 0px;
-}
-
-
-#work.copy, #work p {
-	color: #D4D9D0;
-	font-family: Palatino, serif;
-}
-.copy h2 {
-	padding-top: 5px;	
-}
-.copy a {
-	text-decoration: none;
-	color: #FFF;
-}
-.codeblock {
-	color: #1EFD00;
-	font-family: monospace;	
-	padding-left: 15px;
-	padding-top: 5px;
-}
+@font-face{font-family:"SteinerRegular";src:url("/fonts/steinerlight-webfont.eot");src:url("/fonts/steinerlight-webfont.eot?#iefix") format("embedded-opentype"),url("/fonts/steinerlight-webfont.woff") format("woff"),url("/fonts/steinerlight-webfont.ttf") format("truetype"),url("/fonts/steinerlight-webfont.svg#SteinerRegular") format("svg");font-weight:normal;font-style:normal}
+body{background-repeat:no-repeat;font-family:monospace;margin:0 0 0 0;padding:0 0 0 0;overflow-y:scroll;border-top:2px #008000 solid}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0 0 0 0;padding:0 0 0 0}
+p,li,td,th,textarea,input,select,option,label,.label,dt,dd,address{font-family:monospace;font-size:14px}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+#main-content{height:100%;width:778px;float:left}
+#container{margin:0 auto;margin-top:80px;position:relative;text-align:left;width:1095px}
+#footer{clear:both;display:block;width:100%;height:100px}
+body{background:#fff url("/images/background.jpg") repeat}
+#wrapper{position:relative;z-index:2}
+#terminal{float:left;padding-top:5px;padding-right:7px;padding-left:7px;position:relative;max-height:476px;height:476px;overflow:auto;background-color:#323232;color:#1efd00;-moz-border-radius:5px;border-radius:5px;border:4px solid #eee;font-family:monospace;font-size:12px;line-height:14px;margin-bottom:1px;word-wrap:break-word;padding-bottom:2px;width:763px}
+#work{float:left;padding-top:5px;padding-right:7px;padding-left:7px;position:relative;overflow:auto;background-color:#323232;color:#1efd00;font-family:monospace;font-size:12px;line-height:14px;word-wrap:break-word;padding-bottom:2px;width:763px;-moz-border-radius:5px;border-radius:5px;border:4px solid #eee}
+#terminal a{color:#1eed00}
+#footer{color:#696969;padding:80px 0 24px 0}
+#footer li{background-position:right 1px;background-repeat:no-repeat;display:inline;font-size:11px;padding:0 10px 0 9px}
+#footer .copyright{padding-right:15px}
+#footer li a{color:#696969;padding:0 5px 0 7px}
+a{color:#000;text-decoration:underline}
+span.cursor{background-color:#1efd00;margin-left:0}
+input{background-color:#fff;color:#fff;border:0 none;font-size:12px;font-family:monospace;cursor:default;outline:none;width:1px;height:1px}
+span.hidden{display:none}
+#info{position:relative;float:left;width:260px;margin-right:17px;height:483px}
+ol,ul{list-style-image:none;list-style-position:outside;list-style-type:none}
+#navigation ul{padding:0 0 0 0;margin:0 0 0 0;height:25px;background-color:#b5b5b5;float:left;display:block;padding-left-ltr-source:logical;padding-left-rtl-source:logical;padding-start-value:40px}
+.item-combined{margin-left:18px;margin-top:10px;margin-bottom:10px;height:260px}
+#info ul{padding-bottom:30px}
+#info li{padding-top:5px;padding-bottom:5px}
+#info li a{color:#999;text-decoration:none;text-shadow:#eee 0 1px 0}
+#info li a.active{color:#2e2e2e;text-decoration:none;text-shadow:#eee 0 0 0}
+#info h1{font-family:"SteinerRegular";font-size:27px;text-shadow:0 1px 0 #ddd;color:#333}
+.info h2{color:#e5e5e5;text-shadow:#111 1px -1px 0}
+.info h3.url{margin-top:3px;margin-bottom:3px}
+.info h3.url a{color:#767676;text-decoration:none;font-family:verdana;font-size:9px}
+.image-flag{width:300px;height:201px}
+.image-flag img.flag{position:absolute}
+.item{height:223px;width:352px;padding-top:12px;float:left;padding-left:13px}
+#twitter{padding-top:8px;font-size:12px}
+#twitter .tweet{color:#6c6c6c;text-decoration:none;text-shadow:#fff 0 1px 0;padding:7px 0 7px 0}
+#twitter .tweet a{color:#313131;text-decoration:none;text-shadow:#fff 0 1px 0}
+#work.copy,#work p{color:#d4d9d0;font-family:Palatino,serif}
+.copy h2{padding-top:5px}
+.copy a{text-decoration:none;color:#fff}
+.codeblock{color:#1efd00;font-family:monospace;padding-left:15px;padding-top:5px}
