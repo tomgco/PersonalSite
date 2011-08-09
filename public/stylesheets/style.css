@@ -29,7 +29,7 @@ ol,ul{list-style-image:none;list-style-position:outside;list-style-type:none}
 #info li a{color:#999;text-decoration:none;text-shadow:#eee 0 1px 0}
 #info li a.active{color:#2e2e2e;text-decoration:none;text-shadow:#eee 0 0 0}
 #info h1{font-family:"SteinerRegular";font-size:27px;text-shadow:0 1px 0 #ddd;color:#333}
-.info h2{color:#e5e5e5;text-shadow:#111 1px -1px 0}
+h2{color:#e5e5e5;text-shadow:#111 1px -1px 0}
 .info h3.url{margin-top:3px;margin-bottom:3px}
 .info h3.url a{color:#767676;text-decoration:none;font-family:verdana;font-size:9px}
 .image-flag{width:300px;height:201px}
@@ -38,7 +38,8 @@ ol,ul{list-style-image:none;list-style-position:outside;list-style-type:none}
 #twitter{padding-top:8px;font-size:12px}
 #twitter .tweet{color:#6c6c6c;text-decoration:none;text-shadow:#fff 0 1px 0;padding:7px 0 7px 0}
 #twitter .tweet a{color:#313131;text-decoration:none;text-shadow:#fff 0 1px 0}
-#work.copy,#work p{color:#d4d9d0;font-family:Palatino,serif}
+#work p{color:#ccc;font-size:11px;font-family:verdana}
 .copy h2{padding-top:5px}
-.copy a{text-decoration:none;color:#fff}
-.codeblock{color:#1efd00;font-family:monospace;padding-left:15px;padding-top:5px}
+.copy h3{color:#e5e5e5;text-shadow:#111 1px -1px 0}
+.copy a{text-decoration:none;color:#fff;text-shadow:#555 1px 0 0}
+pre{margin:1em 0;font-size:12px;background-color:#454545;border:1px solid #555;padding:5px;color:#1efd00;overflow:auto;-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
