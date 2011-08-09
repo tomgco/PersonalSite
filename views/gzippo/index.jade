@@ -24,19 +24,19 @@
 	p If you are using gzippo let me know or create a pull request and I will link you here =]
 	br
 	h3 Installation
-	.codeblock $ npm install gzippo
+	pre
+		code
+			$ npm install gzippo
 	br
 	h3 Usage
 	br
 	p In your express/connect server setup, use as follows:
-	.codeblock
-		| var gzippo = require('gzippo');
-		br
-		| //Replace the default connect or express static provider with gzippo's
-		br
-		| //app.use(express.static(__dirname + '/public'));
-		br
-		| app.use(gzippo.staticGzip(__dirname + '/public'));
+	pre
+		code
+			var gzippo = require('gzippo');
+			//Replace the default connect or express static provider with gzippo's
+			//app.use(express.static(__dirname + '/public'));
+			app.use(gzippo.staticGzip(__dirname + '/public'));
 	br
 	h3 Options
 	br
