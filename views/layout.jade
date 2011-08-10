@@ -43,10 +43,11 @@ html(lang="en")
 							a(class=/\/projects*/.test(currentUrl) ? 'active' : '', href='/projects') Projects
 						li &gt;&nbsp;
 							a(class=/\/gzippo*/.test(currentUrl) ? 'active' : '', href='/gzippo') gzippo
-				h2 Twitter
+				#social
+					h2 Twitter
+					.g-plusone(data-size='small', data-count='true')
 				#twitter
 					!=partial('partials/tweets', globals)
-				.g-plusone(data-size='small', data-count='true')
 			section#content
 				!= body
 			.push
