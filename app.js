@@ -122,6 +122,20 @@ app.get('/gzippo', function(req, res){
 	});
 });
 
+app.get('/twitter-feed', function(req, res){
+	function renderView() {
+		res.render('partials/tweets.jade', {
+			layout: 'tweet-layout',
+			globals: globals
+		});
+	}
+	
+	latestTweet.get(function (tweet) {
+		globals.twitterResponse = tweet;
+		renderView();
+	});
+});
+
 //app.error(function(err, req, res){
 //	function renderView() {
 //		console.log(err);

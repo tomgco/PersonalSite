@@ -35,14 +35,14 @@ html(lang="en")
 					ul
 						li &gt;&nbsp;
 							a(class=/^.\/*$/.test(currentUrl) ? 'active' : '', href='/') Terminal
+						//li &gt;&nbsp;
+						//	a(href='http://blog.tomg.co') Blog
 						li &gt;&nbsp;
 							a(class=/\/portfolio*/.test(currentUrl) ? 'active' : '', href='/portfolio') Portfolio
 						li &gt;&nbsp;
 							a(class=/\/projects*/.test(currentUrl) ? 'active' : '', href='/projects') Projects
 						li &gt;&nbsp;
 							a(class=/\/gzippo*/.test(currentUrl) ? 'active' : '', href='/gzippo') gzippo
-						//li &gt;&nbsp;
-						//	a(href='blog.tomg.co') Blog
 				h2 Twitter
 				#twitter
 					!=partial('partials/tweets', globals)
