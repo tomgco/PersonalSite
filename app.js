@@ -8,7 +8,7 @@
 var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
-		title = 'Tom Gallacher - Software Engineer',
+		title = 'Tom Gallacher',
 		metaDescription = 'Hi my name is Tom Gallacher and I am a software engineer / web developer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and photography. tomg.co is just my own personal website experiment using nodejs and portfolio',
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
@@ -109,7 +109,7 @@ app.get('/projects', function(req, res){
 app.get('/gzippo', function(req, res){
 	function renderView() {
 		res.render('gzippo', {
-			title: 'gzippo / ' + title,
+			title: 'gzippo - A nodejs gzip middleware for connect/express.js ' + title,
 			currentUrl: req.url,
 			globals: globals,
 			metaDescription: 'Gzippo is a NodeJS middleware for express gzip / connect gzip support. Can be used by adding express.gzip() or replace express.static() with express.staticGzip() '
