@@ -1,7 +1,7 @@
 
 /**
  * Module dependencies.
- * To Compile Javascript: 
+ * To Compile Javascript:
  * closure command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js config/config.js main.js init.js tweet.js animation.js setup/setup.js
  */
 
@@ -37,11 +37,11 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  app.use(express.errorHandler());
 });
 
 var globals = {};
@@ -54,7 +54,7 @@ app.get('/', function(req, res){
 	if (ipAddress === undefined) {
 		ipAddress = req.connection.remoteAddress;
 	}
-	
+
 	function renderView() {
 		res.render('index', {
 			title: title,
@@ -66,7 +66,7 @@ app.get('/', function(req, res){
 			globals: globals
 		});
 	}
-	
+
 	latestTweet.get(function (tweet) {
 		globals.twitterResponse = tweet;
 		renderView();
@@ -83,7 +83,7 @@ app.get('/portfolio', function(req, res){
 			metaDescription: 'Tom Gallacher has worked on the following sites; shortlist.com, stylist.co.uk, jarredchristmas.co.uk, sunperks.co.uk and weareyates.co.uk'
 		});
 	}
-	
+
 	latestTweet.get(function (tweet) {
 		globals.twitterResponse = tweet;
 		renderView();
@@ -99,7 +99,7 @@ app.get('/projects', function(req, res){
 			metaDescription: 'Projects that Tom Gallacher has or is currently working on for enjoyment and other various reasons.'
 		});
 	}
-	
+
 	latestTweet.get(function (tweet) {
 		globals.twitterResponse = tweet;
 		renderView();
@@ -115,7 +115,7 @@ app.get('/gzippo', function(req, res){
 			metaDescription: 'Gzippo is a NodeJS middleware for express gzip / connect gzip support. Can be used by adding express.gzip() or replace express.static() with express.staticGzip() '
 		});
 	}
-	
+
 	latestTweet.get(function (tweet) {
 		globals.twitterResponse = tweet;
 		renderView();
@@ -129,7 +129,7 @@ app.get('/twitter-feed', function(req, res){
 			globals: globals
 		});
 	}
-	
+
 	latestTweet.get(function (tweet) {
 		globals.twitterResponse = tweet;
 		renderView();
@@ -147,7 +147,7 @@ app.get('/twitter-feed', function(req, res){
 //			metaDescription: metaDescription
 //		});
 //	}
-//	
+//
 //	latestTweet.get(function (tweet) {
 //		globals.twitterResponse = tweet;
 //		renderView();
@@ -164,7 +164,7 @@ app.get('/twitter-feed', function(req, res){
 //			metaDescription: metaDescription
 //		});
 //	}
-//	
+//
 //	latestTweet.get(function (tweet) {
 //		globals.twitterResponse = tweet;
 //		renderView();
@@ -178,5 +178,5 @@ cluster = cluster(app)
 	.use(cluster.pidfiles('pids'))
 	.use(cluster.cli())
 	.listen(3002);
-	
+
 console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
