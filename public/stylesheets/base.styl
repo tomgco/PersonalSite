@@ -52,12 +52,13 @@ body
 	position relative
 	width 1095px
 	margin 0 auto -28px //must be negative of height defined in footer, .push
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	
+	min-height 100%
+	height auto !important
+	height 100%
+	z-index 10
+
 footer, .push
-	height 28px;
+	height 28px
 	clear both
 
 	
@@ -146,6 +147,8 @@ nav li a:hover
 
 footer
 	color #696969
+	position relative
+	z-index 50
 
 footer .copyright
 	padding-right 15px
