@@ -22,9 +22,9 @@ html(lang="en")
 					li PHP
 					li JavaScript
 					li node.js
-					li SQL
-					li mongodb
 					li Objective-C
+					li mongodb
+					li SQL
 					li HTML5
 					li CSS3
 			section#sidebar
@@ -40,10 +40,11 @@ html(lang="en")
 						li &gt;&nbsp;
 							a(class=/\/projects*/.test(currentUrl) ? 'active' : '', href='/projects') Projects
 						li &gt;&nbsp;
+							a(class=/\/contact*/.test(currentUrl) ? 'active' : '', href='/contact') Contact
+						li &gt;&nbsp;
 							a(class=/\/gzippo*/.test(currentUrl) ? 'active' : '', href='/gzippo') gzippo
 				#social
 					h2 Twitter
-					.g-plusone(data-size='small', data-count='true')
 				#twitter
 					!=partial('partials/tweets', globals)
 			section#content
@@ -64,6 +65,4 @@ html(lang="en")
 				li
 					a(href='http://uk.linkedin.com/in/tomgallacher', target='_blank', title='My Professional Profile') Linkedin
 		script(type='text/javascript')
-			head.js('/js/jquery-1.6.2.min.js', '/js/turtles.min.js', function() {
-				head.js('https://apis.google.com/js/plusone.js');
-			});
+			head.js('/js/jquery-1.7.min.js', '/js/turtles.min.js');
