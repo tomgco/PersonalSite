@@ -113,7 +113,7 @@ app.get('/gzippo', function(req, res){
 });
 
 app.get('/twitter-feed', function(req, res){
-	function renderView() {
+	function renderView(tweet) {
 		res.render('partials/tweets.jade', {
 			layout: 'tweet-layout',
 			status: 200,
