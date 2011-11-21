@@ -9,7 +9,7 @@ var express = require('express'),
 		exec = require('child_process').exec,
 		uname = "",
 		title = 'Tom Gallacher',
-		metaDescription = 'Hi my name is Tom Gallacher. I am a software engineer / developer from Bournemouth, United Kingdom. I love programming, the surrounding technologies, live music and photography. tomg.co is just my own personal website experiment using nodejs and portfolio',
+		metaDescription = 'Tom Gallacher; Developer, NodeJS privateer, Siri abuser and way too Linux-y to own a Mac, let alone several. Often seen happily writing code without any knowledge of his surroundings.',
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
 		cluster = require('cluster'),
@@ -77,7 +77,7 @@ app.get('/portfolio', function(req, res){
 			currentUrl: req.url,
 			status: 200,
 			globals: { twitterResponse: tweet },
-			metaDescription: 'Tom Gallacher has worked on the following sites; shortlist.com, stylist.co.uk, jarredchristmas.co.uk, sunperks.co.uk and weareyates.co.uk'
+			metaDescription: 'Tom Gallacher has developed; shortlist.com, stylist.co.uk, jarredchristmas.co.uk, sunperks.co.uk and weareyates.co.uk'
 		});
 	}
 
@@ -91,7 +91,7 @@ app.get('/projects', function(req, res){
 			currentUrl: req.url,
 			globals: { twitterResponse: tweet },
 			status: 200,
-			metaDescription: 'Projects that Tom Gallacher has or is currently working on for enjoyment and other various reasons.'
+			metaDescription: 'Tom Gallacher loves random projects including; Syma 107 Helicopter Interface for arduino, tomg.co, usb ghost and others'
 		});
 	}
 
@@ -105,7 +105,7 @@ app.get('/gzippo', function(req, res){
 			currentUrl: req.url,
 			globals: { twitterResponse: tweet },
 			status: 200,
-			metaDescription: 'Gzippo is a NodeJS middleware for express gzip / connect gzip support. Can be used by adding express.gzip() or replace express.static() with express.staticGzip() '
+			metaDescription: 'Gzippo is a NodeJS middleware for express gzip / connect for gzip support. Using Node\'s built in Zlib API'
 		});
 	}
 
