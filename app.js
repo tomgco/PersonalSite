@@ -13,7 +13,8 @@ var express = require('express'),
 		gzippo = require('gzippo'),
 		latestTweet = require("./modules/latest-tweet"),
 		cluster = require('cluster'),
-		stylus = require('stylus');
+		stylus = require('stylus'),
+		numCPUs = require('os').cpus().length;
 
 var app = module.exports = express.createServer();
 
@@ -173,10 +174,24 @@ app.get('/twitter-feed', function(req, res){
 
 // Only listen on $ node app.js
 
-cluster = cluster(app)
-	.use(cluster.stats())
-	.use(cluster.pidfiles('pids'))
-	.use(cluster.cli())
-	.listen(3002);
+if (cluster.isMaster) {
+	// Fork workers.
+	for (var i = 0; i < numCPUs; i++) {
+		var worker = cluster.fork();
+		console.log('worker ' + worker.pid + ' started.');
+	}
 
-console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
+	cluster.on('death', function(worker) {
+		console.log('worker ' + worker.pid + ' died');
+	});
+} else {
+	app.listen(3002);
+}
+
+// cluster = cluster(app)
+// 	.use(cluster.stats())
+// 	.use(cluster.pidfiles('pids'))
+// 	.use(cluster.cli())
+// 	.listen(3002);
+
+// console.log(new Date() + ":  app starting in " + app.settings.env + " mode on port 3002 (pid: " + process.pid + (cluster.isMaster ? ", master" : "") + ")");
