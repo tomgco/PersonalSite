@@ -26,9 +26,9 @@ app.configure(function(){
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	//app.use(gzippo.gzip());
+	app.use(stylus.middleware({ src: __dirname + '/public/', compress: true }));
 	app.use(gzippo.staticGzip(__dirname + '/public'));
 	app.use(app.router);
-	app.use(stylus.middleware({ src: __dirname + '/public/', compress: true }));
 	//app.use(express.static(__dirname + '/public'));
 	app.use(express.favicon(__dirname + '/public/favicon.ico'));
 	exec("uname -a", function(err, stdout) {
