@@ -4,7 +4,7 @@ $(function() {
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-24124485-1']);
-_gaq.push(['_setDomainName', 'none']);
+_gaq.push(['_setDomainName', 'tomg.co']);
 _gaq.push(['_setAllowLinker', true]);
 _gaq.push(['_trackPageview']);
 _gaq.push(['_trackPageLoadTime']);
