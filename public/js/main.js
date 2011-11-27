@@ -39,7 +39,7 @@ function Terminal(configData) {
 
 	function parseCommand() {
 		var inputString = $('.command').val();
-		_gaq.push(['_trackEvent', inputString, 'commandSent'])
+		_gaq.push(['_trackEvent', 'Commands', inputString]);
 		Terminal.prototype.parsedCommand = function() {
 			var input = inputString.split(" ").reverse();
 			return command = {
