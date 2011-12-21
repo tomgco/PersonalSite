@@ -34,7 +34,7 @@ app.configure(function(){
 	exec("uname -a", function(err, stdout) {
 		uname = stdout.toString();
 	});
-	latestTweet.setUser("tomgallacher89");
+	latestTweet.setUser("tomgco");
 });
 
 app.configure('development', function(){
