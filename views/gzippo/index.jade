@@ -31,6 +31,8 @@ article.copy
 	br
 	h4 Usage
 	br
+	h4 Static Gzip
+	br
 	p In your express/connect server setup, use as follows:
 	pre
 		code
@@ -49,11 +51,11 @@ article.copy
 	br
 	p prefix - A url prefix. If you want all your static content in a root path such as /resource/. Any url paths not matching will be ignored
 	br
-	<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://github.com/tomgallacher/gzippo"></a>
-	<a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a>
-	<iframe src="http://www.facebook.com/plugins/like.php?app_id=234982846530171&amp;href=http%3A%2F%2Fwww.tomg.co%2Fgzippo&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
-	<a href="http://twitter.com/share" class="twitter-share-button" data-text="Checkout gzippo a #nodejs connect gzip / expressjs gzip middleware" data-count="horizontal" data-via="tomgallacher89">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	noscript
-		a(href='http://flattr.com/thing/282348/gzippo-node-js-gzip-module', target='_blank')
-		img(src='http://api.flattr.com/button/flattr-badge-large.png', alt='Flattr this', title='Flattr this', border='0')
-	script(type='text/javascript', src='/js/flattr.js')
+	h4 Streaming Gzip
+	br
+	p Starting in Connect 2.X Expressjs has the ability to use a streaming gzip module provided natively by connect. This will gzip streaming responses including JSON and html responses. As this 2.X branch is not currently stable I have back ported the compress.js component into gzippo.
+	pre
+		code
+			app.use(gzippo.staticGzip(__dirname + '/public'));
+			app.use(gzippo.compress());
+	p This has no caching and is currently unsupported as it will be included in a future connect 1.X release, up until then compress.js will be included in gzippo. 
