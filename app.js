@@ -113,6 +113,20 @@ app.get('/gzippo', function(req, res){
 	latestTweet.get(renderView);
 });
 
+app.get('/gyrojs', function(req, res){
+	function renderView(tweet) {
+		res.render('gyrojs', {
+			title: 'gyro.js - easy access to your web browsers built in accelerometer and gyroscope ' + title,
+			currentUrl: req.url,
+			globals: { twitterResponse: tweet },
+			status: 200,
+			metaDescription: 'gyro.js is a small and lightweight Gyro and Accelerometer consolidation library.'
+		});
+	}
+
+	latestTweet.get(renderView);
+});
+
 app.get('/twitter-feed', function(req, res){
 	function renderView(tweet) {
 		res.render('partials/tweets.jade', {

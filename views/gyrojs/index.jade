@@ -1,0 +1,45 @@
+article.copy
+	h3 Gyro.js -&nbsp;
+		a.url(href='https://raw.github.com/tomgallacher/gyro.js/master/js/gyro.min.js', target='_blank') Download
+	br
+	p gyro.js is an adaptor which combines all the current interfaces and standards on reading Gyro and Accelerometer information and combines them into one simple object.
+	br
+	h4 Compatibility
+	pre
+		code
+			iPhone &gt;= iOS 4.x
+			Chrome &gt;= 12.x
+			Firefox &gt;= 4.x
+	br
+	h4 Installation
+	br
+	p Download <a href="https://raw.github.com/tomgallacher/gyro.js/master/js/gyro.js">gyro.js here</a>
+	p or the <a href="https://raw.github.com/tomgallacher/gyro.js/master/js/gyro.min.js">Minified version here</a>
+	pre
+		code
+			&lt;script src="js/gyro.js"&gt;&lt;/script&gt;
+	br
+	h4 Usage
+	br
+	p At the bottom of your document after the including of gyro.js add the following.
+	pre
+		code
+			&lt;script&gt;
+					gyro.startTracking(function(o) {
+							// o.x, o.y, o.z for accelerometer
+							// o.alpha, o.beta, o.gamma for gyro
+					});
+			&lt;/script&gt;
+	br
+	h4 API
+	br
+	ul
+		li gyro.frequency = 500 - How often to poll for changes.
+		li gyro.getOrientation() - Get the current accelerometer and gyro information.
+		li gyro.startTracking(function(o){...}) - Return the gyro data at the specified frequency defined in gyro.frequency
+		li gyro.stopTracking() - Clear the interval set in gyro.startTracking.
+		li gyro.hasFeature('devicemotion') - Check if the web browser supports either MozOrientation, devicemotion or deviceorientation
+		li gyro.getFeatures() - Gets all accelerometer and gyro features supported.
+	br
+	h4
+		a.url(href='https://github.com/tomgallacher/gyro.js', target='_blank') Source Code
