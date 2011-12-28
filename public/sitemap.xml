@@ -12,16 +12,21 @@
 <url>
   <loc>http://www.tomg.co/portfolio</loc>
   <changefreq>weekly</changefreq>
-	<priority>0.6</priority>
+	<priority>0.9</priority>
 </url>
 <url>
   <loc>http://www.tomg.co/projects</loc>
   <changefreq>monthly</changefreq>
-	<priority>0.3</priority>
+	<priority>0.7</priority>
 </url>
 <url>
   <loc>http://www.tomg.co/gzippo</loc>
   <changefreq>daily</changefreq>
 	<priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.tomg.co/gyrojs</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 </urlset>
