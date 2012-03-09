@@ -1,8 +1,9 @@
 
 /**
  * Module dependencies.
- * To Compile Javascript:
- * closure command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js config/config.js main.js init.js tweet.js animation.js setup/setup.js
+ * To Compile Javascript (remeber to add new commands to the list, cba for a recusive function):
+ * $ cat command/clear.js command/command.js command/echo.js command/help.js command/make.js command/projects.js command/ls.js config/config.js main.js init.js tweet.js animation.js setup/setup.js > turtles.js
+ * $ uglifyjs -nc turtles.js > turtles.min.js
  */
 
 var express = require('express'),
