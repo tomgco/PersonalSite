@@ -4,6 +4,7 @@ function Command() {
 	new Help();
 	new Make();
 	new Projects();
+	new Ls();
 	init();
 
 	function init() {
@@ -20,6 +21,7 @@ function Command() {
 		$(document).bind("Command.make", make);
 		$(document).bind("Command.clear", clear);
 		$(document).bind("Command.projects", projects);
+		$(document).bind("Command.ls", ls);
 	}
 
 	function echo() {
@@ -40,5 +42,9 @@ function Command() {
 
 	function projects() {
 		$(document).trigger("Projects.Init");
+	}
+
+	function ls() {
+		$(document).trigger("Ls.Init");
 	}
 }
