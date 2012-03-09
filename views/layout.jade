@@ -19,9 +19,9 @@ html(lang="en")
 			header
 				h1 Tom Gallacher
 				ul
-					li PHP
-					li JavaScript
 					li node.js
+					li JavaScript
+					li PHP
 					li Objective-C
 					li mongodb
 					li SQL
@@ -29,7 +29,6 @@ html(lang="en")
 					li CSS3
 			section#sidebar
 				nav
-					h2 Info
 					ul
 						li &gt;&nbsp;
 							a(class=/^.\/*$/.test(currentUrl) ? 'active' : '', href='/') Terminal
@@ -46,7 +45,8 @@ html(lang="en")
 						li &gt;&nbsp;
 							a(class=/\/gyrojs*/.test(currentUrl) ? 'active' : '', href='/gyrojs') gyro.js
 				#social
-					h2 Twitter
+					h2 Follow me&nbsp;
+						a(href='http://twitter.com/tomgco') @tomgco
 				#twitter
 					!=partial('partials/tweets', globals)
 			section#content
