@@ -243,6 +243,7 @@ function Clear() {
 			historyPosition = history.length;
 		}
 		appendToContent();
+		$('#terminal').scrollTop($('#terminal').prop('scrollHeight'));
 	}
 
 	function checkForCommands() {

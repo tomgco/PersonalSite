@@ -67,6 +67,7 @@ function Terminal(configData) {
 			historyPosition = history.length;
 		}
 		appendToContent();
+		$('#terminal').scrollTop($('#terminal').prop('scrollHeight'));
 	}
 
 	function checkForCommands() {
