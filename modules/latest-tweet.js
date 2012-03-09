@@ -44,7 +44,7 @@ LatestTweet.prototype.setUser = function (user) {
 		port : 80,
 		path : "/1/statuses/user_timeline.json?screen_name=" +
 						this.user +
-						"&count=5&trim_user=true&include_rts=false&include_entities=false"
+						"&count=5&trim_user=true&include_rts=false&include_entities=false&exclude_replies=true"
 	};
 };
 
