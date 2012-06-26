@@ -29,7 +29,7 @@ app.configure(function(){
 	app.use(stylus.middleware({ src: __dirname + '/public/', compress: true }));
 	//app.use(express.staticCache({ maxLength: 1048576 }));
 	app.use(gzippo.staticGzip(__dirname + '/public'));
-	app.use(gzippo.compress());
+	// app.use(gzippo.compress());
 	//app.use(express.static(__dirname + '/public'));
 	app.use(app.router);
 	app.use(express.favicon(__dirname + '/public/favicon.ico'));
